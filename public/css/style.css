@@ -1,0 +1,489 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+.body {
+  margin: 0;
+  font-family: "Raleway", serif;
+  background-color: #e4e4e4;
+}
+
+.navigation {
+  background-color: #0269A4;
+  display: flex;
+}
+.navigation__link {
+  font-weight: bold;
+  color: #FFD832;
+  text-decoration: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+.navigation__link--right {
+  margin-left: auto;
+}
+.navigation__link--auth {
+  border: none;
+  color: black;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 1rem;
+  background-color: inherit;
+}
+
+.main {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.alert {
+  padding: 2%;
+  margin-top: 2%;
+  text-align: center;
+}
+.alert--success {
+  background-color: #155724;
+  color: white;
+}
+.alert--danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.category {
+  margin: 4% 0;
+  display: flex;
+  text-align: center;
+  background-color: #FFD832;
+  font-weight: bold;
+  width: 100%;
+}
+.category__link {
+  width: 100%;
+  text-decoration: none;
+  color: #0269A4;
+  border-bottom: solid 1px;
+  padding: 2% 0%;
+}
+.category__link--current {
+  background-color: #0269A4;
+  color: #FFD832;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+  margin: 2% 0 3% 0;
+}
+
+.product {
+  padding: 4%;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+  background-color: #FFFFFF;
+}
+.product__image {
+  width: 100%;
+}
+.product__price {
+  margin-bottom: 10%;
+}
+.product__order {
+  margin-top: 2%;
+  border: none;
+  padding: 10px 15px;
+  background-color: #0269A4;
+  color: #FFD832;
+  text-decoration: none;
+}
+.product__back {
+  font-size: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #0269A4;
+  cursor: pointer;
+}
+.product__back:hover {
+  transition: font-size 0.3s ease;
+  font-size: 3rem;
+}
+
+.cart-container__checkout {
+  padding: 2%;
+  display: flex;
+  margin: 1% 0;
+  background-color: white;
+  flex-direction: column;
+}
+.cart-container__total {
+  font-size: 1.5rem;
+  padding: 2% 0;
+}
+.cart-container__button {
+  padding: 1%;
+  width: 7%;
+  text-decoration: none;
+  background-color: #78c45f;
+  color: #FFFFFF;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2%;
+  padding: 2%;
+  margin: 1% 0;
+}
+.cart__image {
+  width: 100%;
+}
+.cart__body {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__heading {
+  margin: 0;
+}
+.cart__price {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.dropdown {
+  text-align: center;
+}
+.dropdown--auth {
+  display: flex;
+}
+.dropdown:hover .dropdown__content {
+  max-height: 140px;
+  transition: max-height 0.3s ease-in;
+  visibility: visible;
+}
+.dropdown:hover .dropdown__button {
+  background-color: #3e8e41;
+}
+.dropdown:hover .dropdown__button--auth {
+  background-color: inherit;
+}
+.dropdown__button {
+  cursor: pointer;
+  background-color: #78c45f;
+  color: #FFFFFF;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 160px;
+}
+.dropdown__button--table {
+  width: 100%;
+  padding: 2%;
+}
+.dropdown__button--auth {
+  background-color: inherit;
+  color: inherit;
+}
+.dropdown__item {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+.dropdown__content {
+  visibility: hidden;
+  max-height: 0;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown__content--table {
+  width: 100%;
+  position: static;
+}
+.dropdown__link {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown__content .dropdown__link:hover {
+  background-color: #f1f1f1;
+}
+
+.customer-form__group {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 0;
+}
+.customer-form__label {
+  width: 100%;
+}
+.customer-form__input {
+  padding: 10px 15px;
+  width: 100%;
+}
+.customer-form__button {
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.payment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+}
+.payment__group {
+  display: flex;
+  padding: 2%;
+  margin-bottom: 2%;
+  background-color: #f3f3f3;
+}
+.payment__image {
+  width: 50px;
+  margin-right: 10px;
+}
+.payment__radio {
+  padding: 2%;
+}
+.payment__button {
+  border: none;
+  background-color: #78c45f;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.thank-you__heading {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3rem;
+  margin-top: 5%;
+  font-weight: bold;
+  box-shadow: 7px 7px 21px 0px black;
+  padding: 8%;
+  background-color: #FFD832;
+  color: #0269A4;
+}
+
+.filter {
+  display: flex;
+  margin-top: 2%;
+  justify-content: space-evenly;
+}
+.filter__label {
+  border: 1px solid #888888;
+  border-right: none;
+  border-radius: 1rem 0 0 1rem;
+  padding: 1%;
+  color: wheat;
+  background-color: #0269A4;
+}
+.filter__select {
+  border-color: #888888;
+  border-left: none;
+  border-right: none;
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+.filter__button {
+  border: 1px solid #888888;
+  border-left: none;
+  border-radius: 0 1rem 1rem 0;
+  padding: 1%;
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #0269A4;
+}
+
+.order {
+  border: 1px solid #AAAAAA;
+  border-collapse: collapse;
+  margin-top: 1%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2%;
+}
+.order__heading, .order__data {
+  border-bottom: 1px solid #AAAAAA;
+  padding: 2%;
+}
+
+.details {
+  border: 1px solid #AAAAAA;
+  border-collapse: collapse;
+  margin-top: 1%;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2%;
+  font-size: 1rem;
+}
+.details__heading, .details__data {
+  border: 1px solid #AAAAAA;
+  padding: 1%;
+}
+.details__row:nth-child(even) {
+  background-color: lightgray;
+}
+
+.order-product {
+  border: 1px solid #AAAAAA;
+  border-collapse: collapse;
+  margin-top: 1%;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+.order-product__heading, .order-product__data {
+  border: 1px solid #AAAAAA;
+  padding: 1%;
+}
+.order-product__row:nth-child(even) {
+  background-color: lightgray;
+}
+
+.order-form__upper {
+  display: grid;
+  grid-gap: 5%;
+  grid-template-columns: repeat(3, 1fr);
+}
+.order-form__bottom {
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: 1fr;
+}
+.order-form__group {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 0;
+}
+.order-form__label {
+  width: 100%;
+}
+.order-form__input {
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.login {
+  background-color: #FFFFFF;
+  width: 50%;
+  margin: 8% 25%;
+  padding: 2%;
+}
+.login__group {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.login__input {
+  padding: 1%;
+}
+.login__button {
+  color: #FFFFFF;
+  border: none;
+  padding: 2%;
+  width: 100%;
+  cursor: pointer;
+  background-color: #78c45f;
+}
+.login__forget {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 2%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #0269A4;
+  color: #FFD832;
+}
+
+/**
+ THE SCSS BELOW IS FOR TOMTOM DEVELOPER. NO BEM HAS BEEN USED.
+ */
+#foldable {
+  width: 320px;
+}
+
+#form {
+  margin-top: 10px;
+}
+
+.icon {
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+}
+
+.tt-icon-size {
+  height: 18px !important;
+  padding: 8px;
+  width: 18px !important;
+}
+
+.icon-spacing-right {
+  margin-right: 12px;
+  margin-top: 22px;
+}
+
+.icon-spacing-left {
+  margin-left: 12px;
+  margin-top: 24px;
+}
+
+.tt-search-box-input {
+  width: calc(100% - 25px) !important;
+}
+
+.searchbox-container {
+  display: flex;
+}
+
+.searchbox-container > .tt-search-box {
+  flex: 1;
+  padding-right: 26px;
+}
+
+.my-location-button {
+  /*background-image: url("../assets/svg/my-location.svg");*/
+  cursor: pointer;
+  margin-left: 7px;
+  padding: 12px;
+}
+
+.my-location-button:hover {
+  /*background-image: url("../assets/svg/my-location-hover.svg");*/
+}
+
+.route-marker {
+  align-items: center;
+  background-color: #4a90e2;
+  border: solid 3px #2faaff;
+  border-radius: 50%;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  transition: width 0.1s, height 0.1s;
+  width: 32px;
+}
