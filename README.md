@@ -1,6 +1,6 @@
-# Webshop larave;
+# Webshop laravel
 
-##Instalation
+## Instalation
 - Clone the project
 - Copy the `.env.example` file and rename is to `.env`
 - Fill in de `.env` file with the correctly
